@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container bg-white p-8 rounded-lg shadow-md w-11/12 max-w-md">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Password Generator</h1>
+        
+        <div class="relative mb-4">
+            <input type="text" id="password" readonly 
+                class="w-full p-3 border border-gray-300 rounded-md text-lg">
+            <button id="copy" 
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition-colors">
+                Copy
+            </button>
+        </div>
+
+        <div class="space-y-4 my-6">
+            <div class="flex justify-between items-center">
+                <label class="text-gray-700">Password Length:</label>
+                <input type="number" id="length" min="4" max="20" value="8" 
+                    class="w-20 p-2 border border-gray-300 rounded-md">
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <label class="text-gray-700">Uppercase Letters:</label>
+                <input type="checkbox" id="uppercase" checked 
+                    class="w-5 h-5 text-blue-500">
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <label class="text-gray-700">Lowercase Letters:</label>
+                <input type="checkbox" id="lowercase" checked 
+                    class="w-5 h-5 text-blue-500">
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <label class="text-gray-700">Numbers:</label>
+                <input type="checkbox" id="numbers" checked 
+                    class="w-5 h-5 text-blue-500">
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <label class="text-gray-700">Symbols:</label>
+                <input type="checkbox" id="symbols" checked 
+                    class="w-5 h-5 text-blue-500">
+            </div>
+        </div>
+
+        <button id="generate" 
+            class="w-full py-3 bg-green-600 text-white rounded-md text-lg font-semibold hover:bg-blue-700 transition-colors">
+            Generate Password
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
